@@ -8,6 +8,7 @@
   "types": "./types/model.d.ts",
   "exports": {
     ".": {
+      "types": "./types/model.d.ts",
       "require": "./build/index.cjs",
       "import": "./build/index.js"
     },
