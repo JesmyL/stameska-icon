@@ -20,7 +20,7 @@ export type StameskaIconKind =
   | 'StrokeSharp'
   | 'SolidSharp';
 
-export type knownIconPack = Record<StameskaIconName, StameskaIconPack>;
+declare const stameskaIconPack = Record<StameskaIconName, StameskaIconPack>;
 
 declare function makeStameskaIconStyledProvider(
   styled: typeof styledstyled,

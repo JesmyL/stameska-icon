@@ -471,4 +471,4 @@ const pack: Record<StameskaIconName, string[]> = {
   WorkHistory: iconPackOfWorkHistory,
 };
 
-export const knownIconPack = pack as Record<StameskaIconName, StameskaIconPack>;
+export const stameskaIconPack = pack as Record<StameskaIconName, StameskaIconPack>;
