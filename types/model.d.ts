@@ -20,6 +20,22 @@ export type TheIconNameKind =
   | 'StrokeSharp'
   | 'SolidSharp';
 
+declare function makeKnownIconSvgProps(
+  icon: TheIconKnownName,
+  kind: TheIconNameKind = 'StrokeRounded',
+  className = '',
+  withoutAnimation = false,
+): {
+  className: string;
+  width: `24`;
+  heigh: '24';
+  viewBox: '0 0 24 24';
+  fill: 'none';
+  dangerouslySetInnerHTML: { __html: string };
+  'with-animation': '' | undefined;
+  'the-icon': string;
+};
+
 export type TheIconKnownName =
   | 'PropertyEdit'
   | '1stBracket'

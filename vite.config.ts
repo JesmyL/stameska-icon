@@ -10,9 +10,7 @@ export default defineConfig(() => {
         name: 'stameska-icon',
         fileName: 'stameska-icon',
       },
-      rollupOptions: {
-        external: ['react'],
-      },
+      rollupOptions: {},
     },
   };
 });
