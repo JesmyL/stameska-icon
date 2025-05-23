@@ -28,9 +28,9 @@ declare function makeStameskaIconStyledProvider(
 
 declare function makeStameskaIconSvgProps(
   icon: StameskaIconName,
-  kind: StameskaIconKind | undefiend,
-  className: string | undefined,
-  withoutAnimation: string | undefined,
+  kind?: StameskaIconKind,
+  className?: string,
+  withoutAnimation?: boolean,
 ): {
   className: string;
   width: `24`;
