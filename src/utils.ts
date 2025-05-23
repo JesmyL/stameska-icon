@@ -1,9 +1,9 @@
 import { makeRegExp } from 'regexpert';
-import { makeKnownIconSvgProps as makeKnownIconSvgPropsFunc, TheIconNameKind } from '../types/model';
+import { makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc, StameskaIconKind } from '../types/model';
 import iconPackOfHelpSquare from './icons/help-square';
 import { knownIconPack } from './pack';
 
-const theIconNamePostfixList: Record<TheIconNameKind, number> = {
+const theIconNamePostfixList: Record<StameskaIconKind, number> = {
   StrokeRounded: 1,
   DuotoneRounded: 2,
   TwotoneRounded: 3,
@@ -23,7 +23,7 @@ const tagAliasDict = {
 const tagAliasReplacer = (_all: string, tagAlias: string) => `<${tagAliasDict[tagAlias as '']} `;
 const tagAliasReg = makeRegExp(`/<(${Object.keys(tagAliasDict).join('|')}) /g`);
 
-export const makeKnownIconSvgProps: typeof makeKnownIconSvgPropsFunc = (
+export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (
   icon,
   kind = 'StrokeRounded',
   className = '',

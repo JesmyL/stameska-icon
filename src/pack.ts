@@ -1,4 +1,4 @@
-import { TheIconKnownName, TheIconPack } from '../types/model';
+import { StameskaIconName, StameskaIconPack } from '../types/model';
 import iconPackOf1stBracket from './icons/1st-bracket';
 import iconPackOfAddCircleHalfDot from './icons/add-circle-half-dot';
 import iconPackOfAlert01 from './icons/alert-01';
@@ -234,7 +234,7 @@ import iconPackOfVynil03 from './icons/vynil-03';
 import iconPackOfWechat from './icons/wechat';
 import iconPackOfWorkHistory from './icons/work-history';
 
-const pack: Record<TheIconKnownName, string[]> = {
+const pack: Record<StameskaIconName, string[]> = {
   AddCircleHalfDot: iconPackOfAddCircleHalfDot,
   Alert01: iconPackOfAlert01,
   Alert02: iconPackOfAlert02,
@@ -471,4 +471,4 @@ const pack: Record<TheIconKnownName, string[]> = {
   WorkHistory: iconPackOfWorkHistory,
 };
 
-export const knownIconPack = pack as Record<TheIconKnownName, TheIconPack>;
+export const knownIconPack = pack as Record<StameskaIconName, StameskaIconPack>;

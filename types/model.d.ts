@@ -1,6 +1,4 @@
-type TagString = `<${'' | 'C' | 'R' | 'E' | 'g'}`;
-
-export type TheIconPack = [
+export type StameskaIconPack = [
   packName: string,
   StrokeRounded: string,
   DuotoneRounded: string,
@@ -11,7 +9,7 @@ export type TheIconPack = [
   SolidSharp: string,
 ];
 
-export type TheIconNameKind =
+export type StameskaIconKind =
   | 'StrokeRounded'
   | 'DuotoneRounded'
   | 'TwotoneRounded'
@@ -20,9 +18,9 @@ export type TheIconNameKind =
   | 'StrokeSharp'
   | 'SolidSharp';
 
-declare function makeKnownIconSvgProps(
-  icon: TheIconKnownName,
-  kind: TheIconNameKind = 'StrokeRounded',
+declare function makeStameskaIconSvgProps(
+  icon: StameskaIconName,
+  kind: StameskaIconKind = 'StrokeRounded',
   className = '',
   withoutAnimation = false,
 ): {
@@ -36,7 +34,7 @@ declare function makeKnownIconSvgProps(
   'the-icon': string;
 };
 
-export type TheIconKnownName =
+export type StameskaIconName =
   | 'PropertyEdit'
   | '1stBracket'
   | 'AddCircleHalfDot'
