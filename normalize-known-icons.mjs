@@ -145,7 +145,7 @@ if (0)
 
     replaceFileContent(filePath, content => {
       content = content.replace(
-        makeRegExp('/(the-icon=)"\\w+ (\\w+)"/g'),
+        makeRegExp('/(stameska-iconv=)"\\w+ (\\w+)"/g'),
         (_all, start, kind) => `${start}"${packName} ${kind}"`,
       );
 

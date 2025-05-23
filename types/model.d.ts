@@ -31,7 +31,7 @@ declare function makeStameskaIconSvgProps(
   fill: 'none';
   dangerouslySetInnerHTML: { __html: string };
   'with-animation': '' | undefined;
-  'the-icon': string;
+  'stameska-icon': string;
 };
 
 export type StameskaIconName =

@@ -74,8 +74,8 @@ export const makeIconStyledProvider = (
   `}`;
 
   return styled.div`
-    :is(html, &) .the-icon[the-icon],
-    .the-icon[the-icon] {
+    :is(html, &) .stameska-icon[stameska-icon],
+    .stameska-icon[stameska-icon] {
       --icon-size: 24px;
       --icon-scale: 1;
       --icon-fill: var(--icon-color);

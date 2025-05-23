@@ -3,7 +3,7 @@ import { makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc, StameskaIconK
 import iconPackOfHelpSquare from './icons/help-square';
 import { knownIconPack } from './pack';
 
-const theIconNamePostfixList: Record<StameskaIconKind, number> = {
+const iconNamePostfixList: Record<StameskaIconKind, number> = {
   StrokeRounded: 1,
   DuotoneRounded: 2,
   TwotoneRounded: 3,
@@ -30,15 +30,15 @@ export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (
   withoutAnimation = false,
 ) => {
   return {
-    className: `${className} the-icon`,
+    className: `${className} stameska-icon`,
     'with-animation': withoutAnimation ? '' : undefined,
-    'the-icon': `${icon} ${kind}`,
+    'stameska-icon': `${icon} ${kind}`,
     width: `24`,
     heigh: '24',
     viewBox: '0 0 24 24',
     fill: 'none',
     dangerouslySetInnerHTML: (usedIcons[`${icon}${kind}`] ??= {
-      __html: (knownIconPack[icon] ?? iconPackOfHelpSquare)[theIconNamePostfixList[kind]].replace(
+      __html: (knownIconPack[icon] ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(
         tagAliasReg,
         tagAliasReplacer,
       ),
