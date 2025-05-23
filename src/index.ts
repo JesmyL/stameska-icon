@@ -1,2 +1,2 @@
-export * from './IconProvider';
+export * from './provider';
 export * from './utils';

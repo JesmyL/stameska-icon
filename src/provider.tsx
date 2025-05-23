@@ -1,4 +1,4 @@
-import styledstyled, { css as csscss, keyframes as keyframeskeyframes } from 'styled-components';
+import { makeStameskaIconStyledProvider as makeStameskaIconStyledProviderFunc } from '../types/model';
 
 const randomOf = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 
@@ -62,11 +62,7 @@ const attrShorts = {
   w_: 'width: 4px;',
 };
 
-export const makeIconStyledProvider = (
-  styled: typeof styledstyled,
-  css: typeof csscss,
-  keyframes: typeof keyframeskeyframes,
-) => {
+export const makeStameskaIconStyledProvider: typeof makeStameskaIconStyledProviderFunc = (styled, css, keyframes) => {
   const fillIconAnimation = keyframes`${css`
     to {
       stroke-dashoffset: 0;

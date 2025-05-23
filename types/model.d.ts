@@ -1,3 +1,5 @@
+import styledstyled, { css as csscss, keyframes as keyframeskeyframes } from 'styled-components';
+
 export type StameskaIconPack = [
   packName: string,
   StrokeRounded: string,
@@ -17,6 +19,12 @@ export type StameskaIconKind =
   | 'BulkRounded'
   | 'StrokeSharp'
   | 'SolidSharp';
+
+declare function makeStameskaIconStyledProvider(
+  styled: typeof styledstyled,
+  css: typeof csscss,
+  keyframes: typeof keyframeskeyframes,
+): string;
 
 declare function makeStameskaIconSvgProps(
   icon: StameskaIconName,
