@@ -1,17 +1,18 @@
 {
   "name": "stameska-icon",
   "description": "",
-  "version": "0.0.12",
+  "version": "0.0.11",
   "type": "module",
   "main": "./build/index.cjs",
   "module": "./build/index.js",
-  "types": "./types/model.d.ts",
   "exports": {
     ".": {
+      "types": "./types/model.d.ts",
       "require": "./build/index.cjs",
       "import": "./build/index.js"
     },
     "./provider": {
+      "types": "./types/provider.model.d.ts",
       "require": "./build/provider.cjs",
       "import": "./build/provider.js"
     }
