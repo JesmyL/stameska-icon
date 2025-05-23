@@ -24,7 +24,7 @@ declare function makeStameskaIconStyledProvider(
   styled: typeof styledstyled,
   css: typeof csscss,
   keyframes: typeof keyframeskeyframes,
-): string;
+): ReturnType<typeof styledstyled.div>;
 
 declare function makeStameskaIconSvgProps(
   icon: StameskaIconName,
