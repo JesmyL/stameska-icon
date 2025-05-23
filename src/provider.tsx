@@ -1,4 +1,4 @@
-import { makeStameskaIconStyledProvider as makeStameskaIconStyledProviderFunc } from '../types/model';
+import { makeStameskaIconStyledProvider as makeStameskaIconStyledProviderFunc } from '../types/provider.model';
 
 const randomOf = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 

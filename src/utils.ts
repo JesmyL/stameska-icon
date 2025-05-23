@@ -1,4 +1,3 @@
-import { makeRegExp } from 'regexpert';
 import { makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc, StameskaIconKind } from '../types/model';
 import iconPackOfHelpSquare from './icons/help-square';
 import { stameskaIconPack } from './pack';
@@ -21,7 +20,7 @@ const tagAliasDict = {
   E: 'ellipse',
 };
 const tagAliasReplacer = (_all: string, tagAlias: string) => `<${tagAliasDict[tagAlias as '']} `;
-const tagAliasReg = makeRegExp(`/<(${Object.keys(tagAliasDict).join('|')}) /g`);
+const tagAliasReg = RegExp(`<(${Object.keys(tagAliasDict).join('|')}) `, 'g');
 
 export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (
   icon,

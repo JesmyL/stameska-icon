@@ -3,14 +3,18 @@
   "description": "",
   "version": "0.0.9",
   "type": "module",
-  "main": "./build/stameska-icon.umd.cjs",
-  "module": "./build/stameska-icon.js",
-  "types": "./types/model.d.ts",
+  "main": "./build/index.cjs",
+  "module": "./build/index.js",
   "exports": {
     ".": {
       "types": "./types/model.d.ts",
-      "require": "./build/stameska-icon.umd.cjs",
-      "import": "./build/stameska-icon.js"
+      "require": "./build/index.cjs",
+      "import": "./build/index.js"
+    },
+    "./provider": {
+      "types": "./types/provider.model.d.ts",
+      "require": "./build/provider.cjs",
+      "import": "./build/provider.js"
     }
   },
   "files": [
@@ -27,11 +31,10 @@
     "@types/node": "^22.15.1",
     "styled-components": "^6.1.18",
     "vite": "^6.3.1",
+    "regexpert": "^0.0.85",
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
-    "atomaric": "^0.0.1",
-    "regexpert": "^0.0.85",
     "typescript": "~5.7.2"
   }
 }
