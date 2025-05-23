@@ -6,7 +6,16 @@ export default defineConfig(() => {
     build: {
       outDir: 'build',
       lib: {
-        entry: [resolve(__dirname, 'src/index.js'), resolve(__dirname, 'src/provider.js')],
+        entry: [
+          //
+          resolve(__dirname, 'src/index.js'),
+          resolve(__dirname, 'src/provider.js'),
+        ],
+        name: 'stameska-icon',
+        fileName: (format, name) => {
+          if (format === 'es') return `${name}.js`;
+          return `${name}.${format}`;
+        },
       },
       rollupOptions: {},
     },
