@@ -13,7 +13,7 @@
       "import": "./build/index.js"
     },
     "./provider": {
-      "types": "./types/provider.model.d.ts",
+      "types": "./types/provider.d.ts",
       "require": "./build/provider.cjs",
       "import": "./build/provider.js"
     }
