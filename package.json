@@ -16,6 +16,13 @@
       "import": "./build/provider.js"
     }
   },
+  "typesVersions": {
+    "*": {
+      "provider": [
+        "./types/provider/model.d.ts"
+      ]
+    }
+  },
   "files": [
     "build/",
     "types/"
