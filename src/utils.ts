@@ -1,7 +1,7 @@
 import { makeRegExp } from 'regexpert';
 import { makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc, StameskaIconKind } from '../types/model';
 import iconPackOfHelpSquare from './icons/help-square';
-import { knownIconPack } from './pack';
+import { stameskaIconPack } from './pack';
 
 const iconNamePostfixList: Record<StameskaIconKind, number> = {
   StrokeRounded: 1,
@@ -38,7 +38,7 @@ export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (
     viewBox: '0 0 24 24',
     fill: 'none',
     dangerouslySetInnerHTML: (usedIcons[`${icon}${kind}`] ??= {
-      __html: (knownIconPack[icon] ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(
+      __html: (stameskaIconPack[icon] ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(
         tagAliasReg,
         tagAliasReplacer,
       ),
