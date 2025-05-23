@@ -91,7 +91,7 @@ export const makeIconStyledProvider = (
 
       ${Object.entries(attrShorts).map(([key, value]) => `[i-c~='${key}']{${value}}`)}
 
-      &.with-animation {
+      &[with-animation] {
         path {
           --stroke-length: 80;
           stroke-dasharray: var(--stroke-length);
