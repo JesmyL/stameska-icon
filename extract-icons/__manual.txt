@@ -1,0 +1,32 @@
+// > - copy to (browser console) and press [Enter]
+// < - paste to {./file}
+
+0. > (localStorage.___iconsToLS) {./in-browser-iconsToLS.js}
+
+1. visit main list page
+   select free icon type
+   > {./in-browser-storeAllIconNames.js}
+   slow scroll page to bottom
+
+2. > {./in-browser-copyIconNames.js}
+   focus on window
+   < {./unknown-icon-names.json}
+
+3. exec: node extract-icons/check-unknown-icons.mjs
+
+4. > (localStorage.__unknownIconNames) {./unknown-icon-names.json}
+
+5. visit: {localStorage.__unknownIconNames[0]}-stroke-rounded
+
+//// repeat it
+6. exec: python extract-icons/console-clicker.py
+   wait to complete
+
+7. > {./in-browser-copyNewIcons.js}
+   focus on window
+   < {./new-icons.json}
+
+8. exec: node extract-icons/makeNewFiles.mjs
+   check {./new-icons.json} is not empty
+
+9. > {./in-browser-clearLSIcons.js}
