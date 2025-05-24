@@ -76,11 +76,13 @@ import iconPackOfComputerSettings from './icons/computer-settings';
 import iconPackOfCongruentToSquare from './icons/congruent-to-square';
 import iconPackOfCopy01 from './icons/copy-01';
 import iconPackOfCopy02 from './icons/copy-02';
+import iconPackOfCreditCardAdd from './icons/credit-card-add';
 import iconPackOfCrop from './icons/crop';
 import iconPackOfCube from './icons/cube';
 import iconPackOfDashboardSpeed01 from './icons/dashboard-speed-01';
 import iconPackOfDashboardSpeed02 from './icons/dashboard-speed-02';
 import iconPackOfDashboardSquareAdd from './icons/dashboard-square-add';
+import iconPackOfDashboardSquareEdit from './icons/dashboard-square-edit';
 import iconPackOfDashboardSquareRemove from './icons/dashboard-square-remove';
 import iconPackOfDelete01 from './icons/delete-01';
 import iconPackOfDelete02 from './icons/delete-02';
@@ -202,6 +204,7 @@ import iconPackOfStar from './icons/star';
 import iconPackOfStarCircle from './icons/star-circle';
 import iconPackOfTarget03 from './icons/target-03';
 import iconPackOfTask01 from './icons/task-01';
+import iconPackOfTaskEdit01 from './icons/task-edit-01';
 import iconPackOfTeacher from './icons/teacher';
 import iconPackOfTelegram from './icons/telegram';
 import iconPackOfText from './icons/text';
@@ -240,6 +243,9 @@ const pack: Record<StameskaIconName, string[]> = {
   Alert02: iconPackOfAlert02,
   Alien02: iconPackOfAlien02,
   '1stBracket': iconPackOf1stBracket,
+  CreditCardAdd: iconPackOfCreditCardAdd,
+  DashboardSquareEdit: iconPackOfDashboardSquareEdit,
+  TaskEdit01: iconPackOfTaskEdit01,
   TwoFinger05: iconPackOfTwoFinger05,
   BatteryLow: iconPackOfBatteryLow,
   BatteryFull: iconPackOfBatteryFull,
