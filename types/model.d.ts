@@ -57,6 +57,7 @@ export type StameskaIconName =
   | 'Alert02'
   | 'Alien02'
   | 'CircleArrowRight02'
+  | 'FolderDetailsReference'
   | 'EditTable'
   | 'TwoFinger05'
   | 'BatteryLow'
