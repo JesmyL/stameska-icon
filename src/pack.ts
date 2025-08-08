@@ -122,6 +122,7 @@ import Headphones from './icons/headphones';
 import Heartbreak from './icons/heartbreak';
 import HelpCircle from './icons/help-circle';
 import HelpSquare from './icons/help-square';
+import HorizonalScrollPoint from './icons/horizonal-scroll-point';
 import Idea01 from './icons/idea-01';
 import Image02 from './icons/image-02';
 import ImageCompositionOval from './icons/image-composition-oval';
@@ -264,6 +265,7 @@ const pack: Record<StameskaIconName, string[]> = {
   MusicNote03,
   StarCircle,
   Vynil03,
+  HorizonalScrollPoint,
   DistributeVerticalTop,
   Layers01,
   TextVerticalAlignment,
