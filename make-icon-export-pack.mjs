@@ -31,3 +31,10 @@ const pack = {\n${entries
 
 export const stameskaIconPack = pack as Record<StameskaIconName, StameskaIconPack>;`,
 );
+
+fs.writeFileSync(
+  './src/names.type.new.ts',
+  `type A = ${entries
+    .map(([, varName]) => `'${varName.startsWith(numericVarStart) ? varName.slice(1) : varName}'`)
+    .join('|\n')}`,
+);

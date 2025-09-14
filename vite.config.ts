@@ -7,9 +7,10 @@ export default defineConfig(() => {
       outDir: 'build',
       lib: {
         entry: [
-          //
           resolve(__dirname, 'src/index.js'),
           resolve(__dirname, 'src/provider.js'),
+          resolve(__dirname, 'src/pack.js'),
+          resolve(__dirname, 'src/utils.js'),
         ],
         name: 'stameska-icon',
         fileName: (format, name) => {

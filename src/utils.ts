@@ -1,6 +1,9 @@
-import { makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc, StameskaIconKind } from '../types/model';
+import { StameskaIconKind } from '../types/model';
+import {
+  makeStameskaIconSvgDynamicProps as makeStameskaIconSvgDynamicPropsType,
+  makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc,
+} from '../types/utils/model';
 import iconPackOfHelpSquare from './icons/help-square';
-import { stameskaIconPack } from './pack';
 
 const iconNamePostfixList: Record<StameskaIconKind, number> = {
   StrokeRounded: 1,
@@ -12,7 +15,6 @@ const iconNamePostfixList: Record<StameskaIconKind, number> = {
   SolidSharp: 7,
 };
 
-const usedIcons: Record<string, { __html: string }> = {};
 const tagAliasDict = {
   '': 'path',
   C: 'circle',
@@ -22,25 +24,27 @@ const tagAliasDict = {
 const tagAliasReplacer = (_all: string, tagAlias: string) => `<${tagAliasDict[tagAlias as '']} `;
 const tagAliasReg = RegExp(`<(${Object.keys(tagAliasDict).join('|')}) `, 'g');
 
-export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (
+export const makeStameskaIconSvgDynamicProps: typeof makeStameskaIconSvgDynamicPropsType = ({
   icon,
   kind = 'StrokeRounded',
   className = '',
   withoutAnimation = false,
-) => {
+}) => {
   return {
     className: `${className} stameska-icon`,
     'with-animation': withoutAnimation ? '' : undefined,
     'stameska-icon': `${icon} ${kind}`,
+  };
+};
+
+export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (pack, kind = 'StrokeRounded') => {
+  return {
     width: `24`,
     heigh: '24',
     viewBox: '0 0 24 24',
     fill: 'none',
-    dangerouslySetInnerHTML: (usedIcons[`${icon}${kind}`] ??= {
-      __html: (stameskaIconPack[icon] ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(
-        tagAliasReg,
-        tagAliasReplacer,
-      ),
-    }),
+    dangerouslySetInnerHTML: {
+      __html: (pack ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(tagAliasReg, tagAliasReplacer),
+    },
   };
 };
