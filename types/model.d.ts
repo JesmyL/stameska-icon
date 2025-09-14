@@ -1,5 +1,7 @@
 import styledstyled, { css as csscss, keyframes as keyframeskeyframes } from 'styled-components';
-import { StameskaIconName } from './name.model';
+import { stameskaIconPack as stameskaIconPackType } from '../src/pack';
+
+export type StameskaIconName = keyof typeof stameskaIconPackType;
 
 declare global {
   type makeStameskaIconStyledProvider = (
