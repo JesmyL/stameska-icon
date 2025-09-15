@@ -1,7 +1,7 @@
-import { StameskaIconKind } from '../types/model';
 import {
-  makeStameskaIconSvgDynamicProps as makeStameskaIconSvgDynamicPropsType,
-  makeStameskaIconSvgProps as makeStameskaIconSvgPropsFunc,
+  makeStameskaIconSvgAttributeProps as makeStameskaIconSvgAttributePropsType,
+  makeStameskaIconSvgHTMLProp as makeStameskaIconSvgHTMLPropFunc,
+  StameskaIconKind,
 } from '../types/utils/model';
 import iconPackOfHelpSquare from './icons/help-square';
 
@@ -18,13 +18,13 @@ const iconNamePostfixList: Record<StameskaIconKind, number> = {
 const tagAliasDict = {
   '': 'path',
   C: 'circle',
-  R: 'rect',
   E: 'ellipse',
+  R: 'rect',
 };
 const tagAliasReplacer = (_all: string, tagAlias: string) => `<${tagAliasDict[tagAlias as '']} `;
 const tagAliasReg = RegExp(`<(${Object.keys(tagAliasDict).join('|')}) `, 'g');
 
-export const makeStameskaIconSvgDynamicProps: typeof makeStameskaIconSvgDynamicPropsType = ({
+export const makeStameskaIconSvgAttributeProps: typeof makeStameskaIconSvgAttributePropsType = ({
   icon,
   kind = 'StrokeRounded',
   className = '',
@@ -32,19 +32,17 @@ export const makeStameskaIconSvgDynamicProps: typeof makeStameskaIconSvgDynamicP
 }) => {
   return {
     className: `${className} stameska-icon`,
-    'with-animation': withoutAnimation ? '' : undefined,
+    'with-animation': withoutAnimation ? undefined : '',
     'stameska-icon': `${icon} ${kind}`,
-  };
-};
-
-export const makeStameskaIconSvgProps: typeof makeStameskaIconSvgPropsFunc = (pack, kind = 'StrokeRounded') => {
-  return {
     width: `24`,
     heigh: '24',
     viewBox: '0 0 24 24',
     fill: 'none',
-    dangerouslySetInnerHTML: {
-      __html: (pack ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(tagAliasReg, tagAliasReplacer),
-    },
+  };
+};
+
+export const makeStameskaIconSvgHTMLProp: typeof makeStameskaIconSvgHTMLPropFunc = (pack, kind = 'StrokeRounded') => {
+  return {
+    __html: (pack ?? iconPackOfHelpSquare)[iconNamePostfixList[kind]].replace(tagAliasReg, tagAliasReplacer),
   };
 };

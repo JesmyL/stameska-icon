@@ -1,6 +1,6 @@
-import { StameskaIconPack } from '../model';
+import { StameskaIconPack } from '../utils/model';
 
-declare type stameskaIconPack = Record<StameskaIconName, StameskaIconPack>;
+declare const stameskaIconPack: Record<StameskaIconName, StameskaIconPack>;
 
 declare type StameskaIconName =
   | '1stBracketCircle'

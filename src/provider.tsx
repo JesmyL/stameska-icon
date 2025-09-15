@@ -1,3 +1,5 @@
+import { makeStameskaIconStyledProvider } from '../types/provider/model';
+
 const randomOf = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const attrShorts = {
@@ -60,7 +62,7 @@ const attrShorts = {
   w_: 'width: 4px;',
 };
 
-const maker: makeStameskaIconStyledProvider = (styled, css, keyframes) => {
+const maker: typeof makeStameskaIconStyledProvider = (styled, css, keyframes) => {
   const fillIconAnimation = keyframes`${css`
     to {
       stroke-dashoffset: 0;
